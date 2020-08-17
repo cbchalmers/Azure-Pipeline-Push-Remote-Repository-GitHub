@@ -1,0 +1,23 @@
+variables:
+- group: 'github-pat-example-contoso-group'
+- name: 'github-organisation'
+  value: 'example-contoso'
+- name: 'github-repository'
+  value: 'example-contoso-repository'
+
+trigger:
+- master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+stages:
+- stage: 'GitPush'
+  jobs:
+    - job: GitPush
+      steps:
+        - checkout: self
+        - script: git push https://$(github-pat-example-contoso-variable)@github.com/$(github-organisation)/$(github-repository).git HEAD:refs/heads/master
+          displayName: 'Git push to remote repository'
+          env:
+            github-pat-example-contoso-group: $(github-pat-example-contoso-variable)
