@@ -10,7 +10,7 @@ Minimise the overhead of maintaining code in Azure DevOps and GitHub by automati
 
 * [Create a Personal Access Token](https://github.com/settings/tokens) with 'repo' (full control of private repositories) scope
 
-### Configuration
+### Configuration of azure-pipelines-template.yml
 
 * Create a variable group within the Azure DevOps project - https://dev.azure.com/{your-organization}/{your-project}/_library?itemType=VariableGroups
 * Create a variable within the variable group to contain the GitHub Personal Access Token
@@ -30,4 +30,4 @@ None
 
 ## Authors
 
-Chris Chalmers - [LinkedIn](https://uk.linkedin.com/in/chris-chalmers)
+Chris Chalmers - [LinkedIn](https://uk.linkedin.com/in/chris-chalmers), [Azure DevOps](https://dev.azure.com/cbchalmers/Personal%20Development), [GitHub](https://github.com/cbchalmers)
